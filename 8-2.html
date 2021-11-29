@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //初始化陣列
+        let listOfName = ['Jack', 'Billy', 'David', 'Allan'];
+
+        //一.設定(新增)元素
+        listOfName[4] = 'Noob'
+        console.log(listOfName);
+
+        //二.使用arr.push()將資料加到陣列尾端
+        listOfName.push('Lora', 'Miya');
+        console.log(listOfName);
+
+        //三.修改元素
+        listOfName[0] = 'Gina';
+        listOfName[2] = 'Bunny';
+        console.log(listOfName[0]);
+        console.log(listOfName[2]);
+        console.log(listOfName);
+
+        //四.刪除尾端元素:arr.pop()
+        listOfName.pop();
+        console.log(listOfName);
+
+        //五.刪除尾端元素，取出放置在新的變數當中
+        let name = listOfName.pop();
+        console.log(name);
+        console.log(listOfName);
+
+        //六.刪除陣列第一個元素:arr.shift()
+        listOfName.shift()
+        console.log(listOfName);
+
+        //七.刪除陣列第一個元素，額外放置到變數中
+        name = listOfName.shift();
+        console.log(name);
+        console.log(listOfName);
+
+        //八.從尾端移出來，放置到最前面
+        name = listOfName.pop()
+        listOfName.unshift(name);
+        console.log(listOfName);
+
+        
+        /**
+        * 【進階操作】
+        * 九、從陣列中間新增一個值 
+        * .splice(指定索引位置, 刪除資料數量, 寫入資料[, 資料2, 資料3, ...])
+        * 
+        * 參考資料:
+        * https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+        */
+
+        //在指定索引位置0的地方刪除0筆資料，並加入Coco
+        listOfName.splice(0, 0, 'Coco');
+        console.log(listOfName);
+
+
+        //在指定索引位置1的地方刪除兩筆資料，並加入Aoao與Bobo，並印出刪除的資料與整筆資料
+        let arrRemoveValue = listOfName.splice(1, 2, 'AOAO', 'BoBo')
+        console.log(arrRemoveValue);
+        console.log(listOfName);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

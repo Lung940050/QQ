@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" method="post" action="">
+        <lable>Your ID number：</lable>
+        <input type="text" id="idNum" value="" />
+        <input type="submit" id="btn" value="Enter" />
+    </form>
+
+
+    <script>
+        document.querySelector('input#btn').addEventListener('click', function(event){
+            event.preventDefault();
+
+            let input = document.querySelector('input#idNum');
+            let re = /^[A-Z][12]\d{8}$/;
+            if(re.test(input.value )){
+                alert('ID input success');
+                
+
+            }
+            else{
+                alert('ID Error')
+            }
+        })
+    </script>
+</body>
+</html>
